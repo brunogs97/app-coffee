@@ -1,0 +1,78 @@
+#signup {
+    border: none;
+    border-radius: 8px;
+    width: 300px;
+    margin: 3em auto 0 auto;
+    padding: 10px;
+    color: #C3A279;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .2);
+}
+
+legend {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid;
+}
+
+.field {
+    margin: 20px 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgb(233, 233, 236);
+    font-size: 12px;
+    width: 200px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    font-size: 14px;
+}
+
+small {
+    display: block;
+    color: rgb(245, 31, 31);
+}
+
+#togglePassword {
+    display: inline;
+    margin-left: 10px;
+}
+
+span {
+    margin-top: 10px;
+    display: block;
+    color: rgb(49, 49, 255);
+    cursor: pointer;
+}
+
+.button {
+    display: block;
+    padding: 8px;
+    color: #ffffff;
+    background: #C3A279;
+    border: none;
+    border-radius: 8px;
+    width: 90px;
+    margin: 0 auto 10px auto;
+}
+
+#createAcc {
+    display: block;
+    color: rgb(49, 49, 255);
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
