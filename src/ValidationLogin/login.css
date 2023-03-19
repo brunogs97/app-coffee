@@ -1,9 +1,9 @@
 .word-waves span {
     position: absolute;
     color: #ffffff;
-    font-size: 1.6rem;
+    font-size: 1.9em;
     transform: translate(-50%, -50%);
-    margin-top: 1.5em;
+    margin-top: 1.8em;
 }
 
 .word-waves span:nth-child(1) {
