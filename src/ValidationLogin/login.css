@@ -1,7 +1,7 @@
 .word-waves span {
     position: absolute;
     color: #ffffff;
-    font-size: 1.9em;
+    font-size: 1.5em;
     transform: translate(-50%, -50%);
     margin-top: 1.8em;
 }
