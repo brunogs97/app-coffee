@@ -71,3 +71,13 @@ togglePassword.addEventListener("click", function () {
     // alternar icone
     this.classList.toggle("bi-eye");
 });
+
+//button toggle mode
+const input = document.querySelector('input');
+const body = document.querySelector('body')
+
+const toggleThemeMode = () => {
+    body.classList.toggle('dark');
+}
+
+input.onchange = toggleThemeMode;

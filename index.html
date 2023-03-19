@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -13,6 +13,17 @@
 </head>
 
 <body>
+    <div class="word-waves">
+        <span>COFFEE SHOP</span>
+        <span>COFFEE SHOP</span>
+    </div>
+
+    <!-- button toggle mode -->
+    <label class="switch">
+        <input type="checkbox" />
+        <span class="slide"></span>
+    </label>
+
     <section class="container-login">
         <form id="signup">
             <legend class="p-2">Sign Up</legend>
@@ -32,8 +43,8 @@
                 <i class="bi bi-eye-slash" id="togglePassword"></i>
                 <small></small><span data-bs-toggle="modal" data-bs-target="#exampleModal">Esqueceu a senha?</span>
             </div>
-            <button type="submit" class="button">Enviar</button>
-            <a href="#" id="createAcc">Criar uma conta</a>
+            <button type="submit" id="button">Enviar</button>
+            <span id="createAcc" data-bs-toggle="modal" data-bs-target="#createAccount">Criar uma conta</span>
         </form>
     </section>
 
@@ -58,6 +69,52 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal create account -->
+    <div class="modal fade" id="createAccount" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Criar uma conta</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3">
+                        <div class="col-12">
+                            <label for="inputName" class="form-label">Nome:</label>
+                            <input type="text" class="form-control" id="inputName" placeholder="Digite o primeiro nome">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Digite uma senha">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="confirmPassword" class="form-label">Confirme a senha</label>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Digite novamente a senha">
+                        </div>
+                        
+                        <div class="col-12">
+                            <label for="inputEmail" class="form-label">Email</label>
+                            <input type="text" class="form-control" id="inputEmail"
+                                placeholder="Digite um e-mail válido">
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                    Me manter conectado
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary">Criar conta</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

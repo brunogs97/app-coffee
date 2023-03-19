@@ -1,8 +1,106 @@
+.word-waves span {
+    position: absolute;
+    color: #ffffff;
+    font-size: 3rem;
+    transform: translate(-50%, -50%);
+    margin-top: 1em;
+}
+
+.word-waves span:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: .3px #C3A279;
+}
+
+.word-waves span:nth-child(2) {
+    color: #C3A279;
+    -webkit-text-stroke: 1px #C3A279;
+    animation: animation 4s ease-in-out infinite;
+}
+
+@keyframes animation {
+    0%, 100% {
+        clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54 60% 
+        70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%)
+    }
+
+    50% {
+        clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%,
+        67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
+}
+
+/* button toggle mode*/
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f2f2f7;
+    transition: 0.4s;
+}
+
+body.dark {
+    background-color: #212121;
+}
+
+.switch {
+    position: relative;
+    width: 3.5rem;
+    height: 2rem;
+    border: 1px solid #d0d1d3;
+    border-radius: 20px;
+    margin-top: 5em;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(215, 215, 228);
+}
+
+.slide::before {
+    position: absolute;
+    content: '';
+    height: 1.4rem;
+    width: 1.4rem;
+    border-radius: 20px;
+    left: 0.3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #37393f;
+}
+
+input:checked + .slide::before {
+    left: calc(100% - 1.7rem);
+    background: #37393f;
+    box-shadow: 
+        inset -3px -2px 5px -2px #8983f7,
+        inset -10px -4px 0 0 #a3dafb;
+} 
+
 #signup {
     border: none;
     border-radius: 8px;
     width: 300px;
-    margin: 3em auto 0 auto;
+    margin: 1em auto 0 auto;
     padding: 10px;
     color: #C3A279;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, .2);
@@ -21,12 +119,12 @@ legend {
     margin: 20px 10px;
 }
 
-label {
+.field label {
     display: block;
     margin-bottom: 5px;
 }
 
-input {
+.field input {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.06);
     border: 1px solid rgb(233, 233, 236);
     font-size: 12px;
@@ -51,14 +149,14 @@ small {
     margin-left: 10px;
 }
 
-span {
+.field span {
     margin-top: 10px;
     display: block;
     color: rgb(49, 49, 255);
     cursor: pointer;
 }
 
-.button {
+#button {
     display: block;
     padding: 8px;
     color: #ffffff;
@@ -70,9 +168,13 @@ span {
 }
 
 #createAcc {
-    display: block;
     color: rgb(49, 49, 255);
     cursor: pointer;
-    text-decoration: none;
+    border: none;
+    background: none;
+    margin: 0 auto;
+    display: block;
     text-align: center;
 }
+
+
