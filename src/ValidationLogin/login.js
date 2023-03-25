@@ -55,7 +55,7 @@ form.addEventListener("submit", function (event) {
     let passwordValid = hasValue(form.elements["password"], PASSWORD_REQUIRED);
     // se estiver válido, enviar formulario.
     if (nameValid && emailValid) {
-        console.log('Definir página')
+        location.href = 'http://127.0.0.1:5500/src/HomePage/homePage.html'
     }
 });
 
